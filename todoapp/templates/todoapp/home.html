@@ -1,0 +1,21 @@
+{% extends 'todoapp/base.html' %}
+
+
+{% block content %}
+    <div class="div">
+        <h2 class="title">Todo List</h2>
+        <hr>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            {% for task in tasks%}
+                <a href="{% url 'detail' task.pk %}">
+                    <li>{{ task.title }}</li>
+                </a>
+            {% endfor%}
+        </ul>
+    </div>
+{% endblock %}
