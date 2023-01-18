@@ -3,6 +3,14 @@
 
 {% block content %}
     <div class="div">
+        <div>
+            {% if user.is_authenticated %}
+                <button>Logout</button>
+            {% else %}
+                <button>Login</button>
+            {% endif %}
+        </div>
+        
         <h2 class="title">Todo List</h2>
         <hr>
         <form method="POST">
