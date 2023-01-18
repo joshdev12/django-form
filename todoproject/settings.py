@@ -131,7 +131,7 @@ STATIC_URL = 'static/'
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # STATIC_DIR = 
-STATICFILES_URL = os.path.join(BASE_DIR, 'todoapp/static')
+STATICFILES_DIR = os.path.join(BASE_DIR, 'static')
 
 # STATICFILES_DIRS = [BASE_DIR / "static"]
 
